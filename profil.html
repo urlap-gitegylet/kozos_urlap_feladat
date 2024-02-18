@@ -7,7 +7,7 @@
     <meta name="author" content="Richter Balázs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fizetés</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profil.html">
     <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 
         </header>
 
-        <nav class="navbar navbar-expand-sm bg-light">
+        <nav class="col-md-12 navbar navbar-expand-sm bg-light">
 
             <div class="container-fluid">
 
@@ -32,18 +32,50 @@
                   <a class="nav-link" href="profil.html">Profil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="furdo.html">Fizetés</a>
+                  <a class="nav-link" href="fizetes.html">Fizetés</a>
                 </li>
               </ul>
             </div>
+          </nav>
 
-        <article>
-            
+        <article class="col-md-8 row m-0">
+
+          <form action="#">
+            <div class="mb-3 mt-3">
+              <h1>Regisztráció</h1>
+              <label for="email" class="form-label">Email cím:</label>
+              <input type="email" class="form-control" id="email" placeholder="Irja be a használni kívánt e-mail címét" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Jelszó:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Irja be a használni kívánt jelszavát" name="pswd">
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Elfogadom a regisztrációs feltételeket
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Regisztrálás</button>
+          </form>
+          <br>
+          <form action="#">
+            <div class="mb-3 mt-3">
+              <h1>Bejelentkezés</h1>
+              <label for="email" class="form-label">Email cím:</label>
+              <input type="email" class="form-control" id="email" placeholder="Adja meg e-mail címét" name="email">
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Jelszó:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Adja meg jelszavát" name="pswd">
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Jegyezzen meg
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Bejelentkezés</button>
+          </form>
         </article>
-
-        <aside>
-
-        </aside>
 
         <footer>
 
