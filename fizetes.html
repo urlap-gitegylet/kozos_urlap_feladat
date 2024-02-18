@@ -53,6 +53,7 @@
                   <div class="col-md-6">
                     <form>
                       <div class="mb-3">
+                        <br>
                         <label for="cardNumber" class="form-label">Kártyaszám</label>
                         <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
                       </div>
@@ -79,6 +80,59 @@
               });
             </script>
           </div>
+          <br>
+            <label>
+              <input type="checkbox" id="myCheckbox2"> Készpénzes fizetés
+            </label>
+            <br>
+            <div id="szovegDiv2" style="display:none;">
+              <div class="col-md-8 row m-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <form>
+                      <p>Készpénzes fizetés esetén a szálláson esedékes a fizetés. Köszönjük a foglalását!</p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <script>
+              // JavaScript kód
+              document.getElementById('myCheckbox2').addEventListener('change', function() {
+                var szovegDiv = document.getElementById('szovegDiv2');
+                szovegDiv.style.display = this.checked ? 'block' : 'none';
+              });
+            </script>
+          </div>
+
+          <br>
+            <label>
+              <input type="checkbox" id="myCheckbox3"> Átutalás
+            </label>
+            <br>
+            <div id="szovegDiv3" style="display:none;">
+              <div class="col-md-8 row m-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <form>
+                      <p>Átutalás esetén a NL71ABNA5985398153 IBAN számra várjuk a foglalás összegét. Köszönjük! </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <script>
+              // JavaScript kód
+              document.getElementById('myCheckbox3').addEventListener('change', function() {
+                var szovegDiv = document.getElementById('szovegDiv3');
+                szovegDiv.style.display = this.checked ? 'block' : 'none';
+              });
+            </script>
+          </div>
         </article>
 
         <aside>
@@ -86,8 +140,8 @@
         </aside>
 
         <footer>
-
         </footer>
+      
     </main>
 </body>
 </html>
