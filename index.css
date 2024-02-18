@@ -2,11 +2,13 @@ main{
     margin: auto;
     width: 90%;
     max-width: 1500px;
+    background-color: rgba(237, 213, 141, 0.5);
     height: 100vh;
+    
 }
 
 article{
-    background-color: rgba(237, 213, 141, 0.505);
+    
 }
 
 header{
