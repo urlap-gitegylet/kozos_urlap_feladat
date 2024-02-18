@@ -16,10 +16,6 @@
 </head>
 <body>
     <main>
-        <header>
-
-        </header>
-
         <nav class="col-md-12 navbar navbar-expand-sm bg-light">
 
           <div class="container-fluid">
@@ -34,10 +30,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="fizetes.html">Fizetés</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="szallas.html">Szállás foglalás</a>
+              </li>
             </ul>
           </div>
         </nav>
 
+        <header>
+        </header>
+        
         <article>
           <div class="col-md-8 row m-0">
             <h2>Fizetési mód</h2>
@@ -56,6 +58,25 @@
                 <label class="form-check-label" for="radio2">Átutalás</label>
               </div>
               <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+          </div>
+          <br>
+          <div class="col-md-8 row m-0">
+            <h2>Amennyiben bankkártyával fizet</h2>
+            <form>
+              <div class="mb-3">
+                <label for="cardNumber" class="form-label">Kártyaszám</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+              </div>
+              <div class="mb-3">
+                <label for="expirationDate" class="form-label">Lejárati dátum</label>
+                <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY">
+              </div>
+              <div class="mb-3">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="cvv" placeholder="123">
+              </div>
+              <button type="submit" class="btn btn-primary">Fizetés</button>
             </form>
           </div>
         </article>
