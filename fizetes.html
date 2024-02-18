@@ -14,40 +14,135 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <main>
+<body class="bg-dark">
+    <main class="text-light">
+        <nav class="col-md-12 navbar navbar-expand-sm bg-primary">
+
+          <div class="container-fluid">
+
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Kezdőlap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="profil.html">Profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fizetes.html">Fizetés</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="szallas.html">Szállás foglalás</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
         <header>
-
         </header>
-
-        <nav class="navbar navbar-expand-sm bg-light">
-
-            <div class="container-fluid">
-
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Kezdőlap</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="profil.html">Profil</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="furdo.html">Fizetés</a>
-                </li>
-              </ul>
-            </div>
-
+        <br>
         <article>
-            
+          <h2>Kérem válassza ki a fizetési módot!</h2>
+          <br>
+            <label>
+              <input type="checkbox" id="myCheckbox"> Bankkártyás fizetés
+            </label>
+            <br>
+            <div id="szovegDiv" style="display:none;">
+              <div class="col-md-8 row m-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="mb-3">
+                        <br>
+                        <label for="cardNumber" class="form-label">Kártyaszám</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                      </div>
+                      <div class="mb-3">
+                        <label for="expirationDate" class="form-label">Lejárati dátum</label>
+                        <input type="text" class="form-control" id="expirationDate" placeholder="MM/YY">
+                      </div>
+                      <div class="mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="123">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Fizetés</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <script>
+              // JavaScript kód
+              document.getElementById('myCheckbox').addEventListener('change', function() {
+                var szovegDiv = document.getElementById('szovegDiv');
+                szovegDiv.style.display = this.checked ? 'block' : 'none';
+              });
+            </script>
+          </div>
+          <br>
+            <label>
+              <input type="checkbox" id="myCheckbox2"> Készpénzes fizetés
+            </label>
+            <br>
+            <div id="szovegDiv2" style="display:none;">
+              <div class="col-md-8 row m-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <form>
+                      <p>Készpénzes fizetés esetén a szálláson esedékes a fizetés. Köszönjük a foglalását!</p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <script>
+              // JavaScript kód
+              document.getElementById('myCheckbox2').addEventListener('change', function() {
+                var szovegDiv = document.getElementById('szovegDiv2');
+                szovegDiv.style.display = this.checked ? 'block' : 'none';
+              });
+            </script>
+          </div>
+
+          <br>
+            <label>
+              <input type="checkbox" id="myCheckbox3"> Átutalás
+            </label>
+            <br>
+            <div id="szovegDiv3" style="display:none;">
+              <div class="col-md-8 row m-0">
+                <div class="row">
+                  <div class="col-md-6">
+                    <br>
+                    <form>
+                      <p>Átutalás esetén a NL71ABNA5985398153 IBAN számra várjuk a foglalás összegét. Köszönjük! </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <script>
+              // JavaScript kód
+              document.getElementById('myCheckbox3').addEventListener('change', function() {
+                var szovegDiv = document.getElementById('szovegDiv3');
+                szovegDiv.style.display = this.checked ? 'block' : 'none';
+              });
+            </script>
+          </div>
         </article>
 
         <aside>
 
         </aside>
 
-        <footer>
-
+        <footer class="container text-center">
+          <p>Richter Balázs, Simon Gergő, Weimper Gergő</p>
         </footer>
+      
     </main>
 </body>
 </html>

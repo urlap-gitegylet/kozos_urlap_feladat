@@ -6,21 +6,21 @@
     <meta name="keywords" content="Szállás, Szálloda, Nyaralás">
     <meta name="author" content="Richter Balázs">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fizetés</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Profil</title>
+    <link rel="stylesheet" href="profil.html">
     <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <main>
+<body class="bg-dark">
+    <main class="text-light">
         <header>
 
         </header>
 
-        <nav class="navbar navbar-expand-sm bg-light">
+        <nav class="col-md-12 navbar navbar-expand-sm bg-primary">
 
             <div class="container-fluid">
 
@@ -32,21 +32,66 @@
                   <a class="nav-link" href="profil.html">Profil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="furdo.html">Fizetés</a>
+                  <a class="nav-link" href="fizetes.html">Fizetés</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="szallas.html">Szállás foglalás</a>
                 </li>
               </ul>
             </div>
+          </nav>
 
-        <article>
-            
+        <article class="col-md-8 row m-0">
+
+          <form action="/action_page.php" class="was-validated">
+            <div class="mb-3 mt-3">
+              <h1>Regisztráció</h1>
+              <label for="uname" class="form-label">Felhasználónév:</label>
+              <input type="text" class="form-control" id="uname" placeholder="Irja be a használni kívánt felhasználónevét" name="uname" required>
+              <div class="valid-feedback">Követelmény elfogadva.</div>
+              <div class="invalid-feedback">Kötelező mező! Kérem ne hagyja üresen ezt a mezőt.</div>
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Jelszó:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Irja be a használni kívánt jelszavát" name="pswd" required>
+              <div class="valid-feedback">Követelmény elfogadva.</div>
+              <div class="invalid-feedback">Kötelező mező! Kérem ne hagyja üresen ezt a mezőt.</div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+              <label class="form-check-label" for="myCheck">Elfogadom a reigsztrációt feltételeket.</label>
+              <div class="valid-feedback">Követelmény elfogadva, a regisztráció folytatásához kattintson a regisztráció gombra.</div>
+              <div class="invalid-feedback">Kérem fogadja a regisztrációs feltételeket a regisztráció folytatásához.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Regisztráció</button>
+          </form>
+          <br>
+          <form action="/action_page.php" class="was-validated">
+            <div class="mb-3 mt-3">
+              <h1>Bejelentkezés</h1>
+              <label for="uname" class="form-label">Felhasználónév:</label>
+              <input type="text" class="form-control" id="uname" placeholder="Irja be a használni kívánt felhasználónevét" name="uname" required>
+              <div class="valid-feedback">A felhasználónév létezik.</div>
+              <div class="invalid-feedback">Kérem írja a felhasználónevét.</div>
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Jelszó:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Irja be a használni kívánt jelszavát" name="pswd" required>
+              <div class="valid-feedback">A jelszó a felhasználó fiókhoz tartozik</div>
+              <div class="invalid-feedback">Kérem írja be a jelszavát.</div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+              <label class="form-check-label" for="myCheck">Jegyezzen meg</label>
+              <div class="valid-feedback">Felhasználónév és jelszó megjegyezve.</div>
+              <div class="invalid-feedback">Ha meg akarja jegyeztetni a felhasználónevét és jelszavát, itt megteheti.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Regisztráció</button>
+          </form>
         </article>
 
-        <aside>
-
-        </aside>
-
-        <footer>
-
+        <footer class="container text-center">
+          <p>Richter Balázs, Simon Gergő, Weimper Gergő</p>
         </footer>
     </main>
 </body>
